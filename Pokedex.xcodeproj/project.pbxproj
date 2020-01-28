@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9916143B23E0F16F003672AC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916143A23E0F16F003672AC /* Pokemon.swift */; };
+		9916143D23E0F6CE003672AC /* sample_pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = 9916143C23E0F6CD003672AC /* sample_pokemon.json */; };
 		997B6AE523DD1360009BC70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B6AE423DD1360009BC70A /* AppDelegate.swift */; };
 		997B6AE723DD1360009BC70A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B6AE623DD1360009BC70A /* SceneDelegate.swift */; };
 		997B6AE923DD1360009BC70A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B6AE823DD1360009BC70A /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9916143A23E0F16F003672AC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		9916143C23E0F6CD003672AC /* sample_pokemon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_pokemon.json; sourceTree = "<group>"; };
 		997B6AE123DD1360009BC70A /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B6AE423DD1360009BC70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997B6AE623DD1360009BC70A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 				997B6AE423DD1360009BC70A /* AppDelegate.swift */,
 				997B6AE623DD1360009BC70A /* SceneDelegate.swift */,
 				997B6AE823DD1360009BC70A /* ContentView.swift */,
+				9916143A23E0F16F003672AC /* Pokemon.swift */,
 				997B6AEA23DD1369009BC70A /* Assets.xcassets */,
 				997B6AEF23DD1369009BC70A /* LaunchScreen.storyboard */,
 				997B6AF223DD1369009BC70A /* Info.plist */,
+				9916143C23E0F6CD003672AC /* sample_pokemon.json */,
 				997B6AEC23DD1369009BC70A /* Preview Content */,
 			);
 			path = Pokedex;
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997B6AF123DD1369009BC70A /* LaunchScreen.storyboard in Resources */,
+				9916143D23E0F6CE003672AC /* sample_pokemon.json in Resources */,
 				997B6AEE23DD1369009BC70A /* Preview Assets.xcassets in Resources */,
 				997B6AEB23DD1369009BC70A /* Assets.xcassets in Resources */,
 			);
@@ -147,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997B6AE523DD1360009BC70A /* AppDelegate.swift in Sources */,
+				9916143B23E0F16F003672AC /* Pokemon.swift in Sources */,
 				997B6AE723DD1360009BC70A /* SceneDelegate.swift in Sources */,
 				997B6AE923DD1360009BC70A /* ContentView.swift in Sources */,
 			);
@@ -286,6 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
+				DEVELOPMENT_TEAM = TB2V95P7U7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
+				DEVELOPMENT_TEAM = TB2V95P7U7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
