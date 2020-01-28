@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Pokemon {
-    enum PokemonType: String {
+struct Pokemon: Decodable {
+    enum PokemonType: String, Decodable, CaseIterable {
         case fire = "fire";
         case grass = "grass";
         case water = "water";
@@ -22,4 +22,8 @@ struct Pokemon {
     var name: String
     var primaryType: PokemonType
     var secondaryType: PokemonType?
+
+    func formattedNumber() -> String {
+        String(format: "%03d", arguments: [pokedexNumber])
+    }
 }
