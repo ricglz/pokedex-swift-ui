@@ -6,10 +6,12 @@
 //  Copyright © 2020 Ricardo González Castillo. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 struct Pokemon: Decodable {
-    enum PokemonType: String, Decodable, CaseIterable {
+    enum PokemonType: String, Decodable, CaseIterable, Identifiable {
+        var id: String { rawValue }
+
         case fire = "fire";
         case grass = "grass";
         case water = "water";
@@ -18,12 +20,27 @@ struct Pokemon: Decodable {
         case electric = "electric";
     }
 
-    var pokedexNumber: Int
+    private var pokedexNumber: Int
     var name: String
-    var primaryType: PokemonType
-    var secondaryType: PokemonType?
+    private var primaryType: PokemonType
+    private var secondaryType: PokemonType?
 
     func formattedNumber() -> String {
-        String(format: "%03d", arguments: [pokedexNumber])
+        String(format: "#%03d", arguments: [pokedexNumber])
+    }
+    
+    func types() -> [PokemonType] {
+        if secondaryType != nil {
+            return [primaryType, secondaryType!]
+        }
+        return [primaryType]
+    }
+    
+    func primaryColor() -> Color {
+        typeColor(primaryType.rawValue)
+    }
+    
+    func secondaryColor() -> Color? {
+        secondaryType == nil ? nil : typeColor(secondaryType!.rawValue)
     }
 }
