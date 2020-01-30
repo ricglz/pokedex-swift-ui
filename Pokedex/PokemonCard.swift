@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TypePill: View {
     var typeValue: String
-    
+
     var body: some View {
         HStack {
             Text(typeValue.capitalized)
@@ -27,7 +27,7 @@ struct TypePill: View {
 
 struct TypeStack: View {
     var types: [Pokemon.PokemonType]
-    
+
     var body: some View {
         VStack {
             ForEach(types, id: \.self) { (pokemonType) in

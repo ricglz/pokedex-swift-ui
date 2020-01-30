@@ -28,18 +28,18 @@ struct Pokemon: Decodable {
     func formattedNumber() -> String {
         String(format: "#%03d", arguments: [pokedexNumber])
     }
-    
+
     func types() -> [PokemonType] {
         if secondaryType != nil {
             return [primaryType, secondaryType!]
         }
         return [primaryType]
     }
-    
+
     func primaryColor() -> Color {
         typeColor(primaryType.rawValue)
     }
-    
+
     func secondaryColor() -> Color? {
         secondaryType == nil ? nil : typeColor(secondaryType!.rawValue)
     }
