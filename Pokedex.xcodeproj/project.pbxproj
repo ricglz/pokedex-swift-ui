@@ -18,6 +18,7 @@
 		997B6AEE23DD1369009BC70A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B6AED23DD1369009BC70A /* Preview Assets.xcassets */; };
 		997B6AF123DD1369009BC70A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B6AEF23DD1369009BC70A /* LaunchScreen.storyboard */; };
 		99A36EF623E49E0500423163 /* PokemonSrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A36EF523E49E0500423163 /* PokemonSrollView.swift */; };
+		99A36EFA23E4AEAA00423163 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A36EF923E4AEAA00423163 /* ArrayExtension.swift */; };
 		99CBCB6F23E38D8D0092AB2F /* PokemonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCB6E23E38D8D0092AB2F /* PokemonColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		997B6AF023DD1369009BC70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		997B6AF223DD1369009BC70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99A36EF523E49E0500423163 /* PokemonSrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSrollView.swift; sourceTree = "<group>"; };
+		99A36EF923E4AEAA00423163 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		99CBCB6E23E38D8D0092AB2F /* PokemonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				99CBCB6E23E38D8D0092AB2F /* PokemonColor.swift */,
 				9916143E23E0F77E003672AC /* PokemonCard.swift */,
 				99A36EF523E49E0500423163 /* PokemonSrollView.swift */,
+				99A36EF923E4AEAA00423163 /* ArrayExtension.swift */,
 				997B6AEA23DD1369009BC70A /* Assets.xcassets */,
 				997B6AEF23DD1369009BC70A /* LaunchScreen.storyboard */,
 				997B6AF223DD1369009BC70A /* Info.plist */,
@@ -168,6 +171,7 @@
 				997B6AE523DD1360009BC70A /* AppDelegate.swift in Sources */,
 				99CBCB6F23E38D8D0092AB2F /* PokemonColor.swift in Sources */,
 				9916144123E0F7D6003672AC /* Data.swift in Sources */,
+				99A36EFA23E4AEAA00423163 /* ArrayExtension.swift in Sources */,
 				99A36EF623E49E0500423163 /* PokemonSrollView.swift in Sources */,
 				9916143F23E0F77E003672AC /* PokemonCard.swift in Sources */,
 				9916143B23E0F16F003672AC /* Pokemon.swift in Sources */,

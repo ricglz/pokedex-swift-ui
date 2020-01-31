@@ -20,6 +20,7 @@ struct TypePill: View {
                 .padding(.vertical, 3)
                 .padding(.horizontal, 15)
                 .foregroundColor(typeTextColor(type))
+                .scaledToFill()
         }.background(typeColor(type))
             .contrast(1.25)
             .cornerRadius(20)
@@ -44,29 +45,32 @@ struct PokemonCard: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(pokemon.name).font(.title)
+                Text(pokemon.name).font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding(.leading)
                     .padding(.top)
+                    .scaledToFill()
                 Spacer()
                 Text(pokemon.formattedNumber())
                     .font(.headline)
                     .fontWeight(.bold)
                     .padding(.trailing)
                     .opacity(0.5)
+                    .scaledToFill()
             }.padding(.top)
             HStack {
                 TypeStack(types: pokemon.types()).padding(.trailing)
+                Spacer()
                 ZStack(alignment: .bottomTrailing) {
-                    Image("pokeball").resizable().opacity(0.05)
-                    Image(pokemon.name).resizable().frame(width: 100, height: 100)
-                }.frame(width: 125, height: 125)
+                    Image("pokeball").resizable().opacity(0.05).scaledToFit().frame(height: 76)
+                    Image(pokemon.name).resizable().scaledToFit().frame(height: 76)
+                }.frame(height: 76)
             }.padding(.bottom).padding(.horizontal)
         }.background(pokemon.primaryColor())
             .cornerRadius(15)
             .shadow(radius: 2.5)
-            .frame(width: 265)
+            .frame(height: 150)
     }
 }
 
