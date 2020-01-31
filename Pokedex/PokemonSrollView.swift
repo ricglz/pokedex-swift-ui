@@ -1,5 +1,5 @@
 //
-//  PokemonGrid.swift
+//  PokemonScrollView.swift
 //  Pokedex
 //
 //  Created by Ricardo J. González on 31/01/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PokemonGrid: View {
+struct PokemonScrollView: View {
     var pokemonArray: [Pokemon]
     
     var body: some View {
@@ -22,8 +22,8 @@ struct PokemonGrid: View {
     }
 }
 
-struct PokemonGrid_Previews: PreviewProvider {
+struct PokemonScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonGrid(pokemonArray: pokemonArray)
+        PokemonScrollView(pokemonArray: pokemonArray)
     }
 }
