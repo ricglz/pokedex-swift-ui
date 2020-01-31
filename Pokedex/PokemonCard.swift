@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct TypePill: View {
-    var typeValue: String
+    var type: Pokemon.PokemonType
+    var typeValue: String { type.rawValue }
 
     var body: some View {
         HStack {
@@ -18,9 +19,9 @@ struct TypePill: View {
                 .fontWeight(.semibold)
                 .padding(.vertical, 3)
                 .padding(.horizontal, 15)
-                .foregroundColor(Color.white)
-        }.background(typeColor(typeValue)
-            .contrast(1.25))
+                .foregroundColor(typeTextColor(type))
+        }.background(typeColor(type))
+            .contrast(1.25)
             .cornerRadius(20)
     }
 }
@@ -31,7 +32,7 @@ struct TypeStack: View {
     var body: some View {
         VStack {
             ForEach(types, id: \.self) { (pokemonType) in
-                TypePill(typeValue: pokemonType.rawValue).padding(.bottom)
+                TypePill(type: pokemonType).padding(.bottom)
             }
         }
     }
@@ -71,7 +72,7 @@ struct PokemonCard: View {
 
 struct PokemonCard_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonCard(pokemon: pokemonArray[0])
+        PokemonCard(pokemon: pokemonArray[5])
             .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
             .previewDisplayName("iPhone SE")
     }
