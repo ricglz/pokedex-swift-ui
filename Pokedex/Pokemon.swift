@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Pokemon: Decodable {
+struct Pokemon: Decodable, Identifiable {
     enum PokemonType: String, Decodable, CaseIterable, Identifiable {
         var id: String { rawValue }
 
@@ -25,6 +25,8 @@ struct Pokemon: Decodable {
     private var primaryType: PokemonType
     private var secondaryType: PokemonType?
 
+    var id: Int { pokedexNumber }
+
     func formattedNumber() -> String {
         String(format: "#%03d", arguments: [pokedexNumber])
     }
@@ -37,10 +39,10 @@ struct Pokemon: Decodable {
     }
 
     func primaryColor() -> Color {
-        typeColor(primaryType.rawValue)
+        typeColor(primaryType)
     }
 
     func secondaryColor() -> Color? {
-        secondaryType == nil ? nil : typeColor(secondaryType!.rawValue)
+        secondaryType == nil ? nil : typeColor(secondaryType)
     }
 }
