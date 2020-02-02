@@ -3,36 +3,42 @@
     "name": "Bulbasaur",
     "pokedexNumber": 1,
     "primaryType": "grass",
-    "secondaryType": "poison"
+    "secondaryType": "poison",
+    "image": null
   },
   {
     "name": "Ivasaur",
     "pokedexNumber": 2,
     "primaryType": "grass",
-    "secondaryType": "poison"
+    "secondaryType": "poison",
+    "image": null
   },
   {
     "name": "Venasaur",
     "pokedexNumber": 3,
     "primaryType": "grass",
-    "secondaryType": "poison"
+    "secondaryType": "poison",
+    "image": null
   },
   {
     "name": "Charmander",
     "pokedexNumber": 4,
     "primaryType": "fire",
-    "secondaryType": null
+    "secondaryType": null,
+    "image": null
   },
   {
     "name": "Charmeleon",
     "pokedexNumber": 5,
     "primaryType": "fire",
-    "secondaryType": null
+    "secondaryType": null,
+    "image": null
   },
   {
     "name": "Charizard",
     "pokedexNumber": 6,
     "primaryType": "fire",
-    "secondaryType": "flying"
+    "secondaryType": "flying",
+    "image": null
   }
 ]

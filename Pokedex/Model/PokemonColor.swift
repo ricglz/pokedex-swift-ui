@@ -22,6 +22,10 @@ func typeColor(_ type: Pokemon.PokemonType?) -> Color {
         return POKEMON_RED
     case .flying:
         return POKEMON_SKY
+    case .bug:
+        return Color.green
+    case .water:
+        return Color.blue
     default:
         return .white
     }

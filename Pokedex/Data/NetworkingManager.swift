@@ -25,7 +25,8 @@ class NetworkingManager: ObservableObject {
                         self.pkMatrix = pokemons.map { (pokemonGraphql) -> Pokemon in
                             Pokemon((pokemonGraphql?.name)!,
                                     pokemonGraphql?.types as! [String],
-                                    Int((pokemonGraphql?.number)!)!)
+                                    Int((pokemonGraphql?.number)!)!,
+                                    image: pokemonGraphql?.image)
                         }.chunked(into: 2)
                     } else if let errors = graphQLResult.errors {
                         print(errors)

@@ -23,6 +23,7 @@ struct TypePill: View {
         }.background(typeColor(type))
             .contrast(1.25)
             .cornerRadius(20)
+            .shadow(radius: 2.5)
     }
 }
 
@@ -66,8 +67,10 @@ struct PokemonCard: View {
                         .opacity(0.05)
                         .scaledToFit()
                         .frame(height: 76)
-                    Image(pokemon.name).resizable()
-                        .scaledToFit()
+                    URLImage(
+                        pokemon.image ?? pokemon.name,
+                        placeholder: Image(pokemon.name)
+                    ).scaledToFit()
                         .frame(height: 76)
                 }.frame(height: 76)
             }.padding(.bottom).padding(.horizontal)
