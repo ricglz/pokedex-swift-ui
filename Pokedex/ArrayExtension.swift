@@ -10,9 +10,9 @@ import Foundation
 
 extension Array {
     func chunked(into size:Int) -> [[Element]] {
-        
+
         var chunkedArray = [[Element]]()
-        
+
         for index in 0...self.count {
             if index % size == 0 && index != 0 {
                 chunkedArray.append(Array(self[(index - size)..<index]))
@@ -20,7 +20,11 @@ extension Array {
                 chunkedArray.append(Array(self[index - 1..<index]))
             }
         }
-        
+
         return chunkedArray
+    }
+
+    func isNotEmpty() -> Bool {
+        !self.isEmpty
     }
 }
