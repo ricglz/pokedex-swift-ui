@@ -10,7 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .leading) {
+            Text("Pokédex").font(.largeTitle)
+                .foregroundColor(.primary)
+                .italic()
+            PokemonScrollView()
+        }.padding(.horizontal)
     }
 }
 

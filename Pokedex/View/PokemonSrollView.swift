@@ -9,24 +9,25 @@
 import SwiftUI
 
 struct PokemonScrollView: View {
-    var chunkedPkArray: [[Pokemon]]
-    
+    @ObservedObject var network = NetworkingManager()
+
     var body: some View {
         ScrollView {
-            ForEach(0..<chunkedPkArray.count) { index in
-                HStack {
-                    ForEach(self.chunkedPkArray[index]) { (pokemon) in
-                        PokemonCard(pokemon: pokemon)
-                    }
-                }.frame(height: 150)
-                    .padding(.bottom)
+            if network.pkMatrix.isNotEmpty() {
+                ForEach(network.pkMatrix, id: \.first!.id) { (array) in
+                    HStack {
+                        ForEach(array) { (pokemon) in
+                            PokemonCard(pokemon: pokemon)
+                        }
+                    }.frame(height: 150).padding(.bottom)
+                }
             }
-        }.padding(.horizontal)
+        }
     }
 }
 
 struct PokemonScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonScrollView(chunkedPkArray: pokemonArray.chunked(into: 2))
+        PokemonScrollView()
     }
 }
