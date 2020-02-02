@@ -14,8 +14,7 @@ struct TypePill: View {
 
     var body: some View {
         HStack {
-            Text(typeValue.capitalized)
-                .font(.footnote)
+            Text(typeValue.capitalized).font(.footnote)
                 .fontWeight(.semibold)
                 .padding(.vertical, 3)
                 .padding(.horizontal, 15)
@@ -63,8 +62,13 @@ struct PokemonCard: View {
                 TypeStack(types: pokemon.types()).padding(.trailing)
                 Spacer()
                 ZStack(alignment: .bottomTrailing) {
-                    Image("pokeball").resizable().opacity(0.05).scaledToFit().frame(height: 76)
-                    Image(pokemon.name).resizable().scaledToFit().frame(height: 76)
+                    Image("pokeball").resizable()
+                        .opacity(0.05)
+                        .scaledToFit()
+                        .frame(height: 76)
+                    Image(pokemon.name).resizable()
+                        .scaledToFit()
+                        .frame(height: 76)
                 }.frame(height: 76)
             }.padding(.bottom).padding(.horizontal)
         }.background(pokemon.primaryColor())
@@ -77,7 +81,7 @@ struct PokemonCard: View {
 struct PokemonCard_Previews: PreviewProvider {
     static var previews: some View {
         PokemonCard(pokemon: pokemonArray[5])
-            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-            .previewDisplayName("iPhone SE")
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+        .previewDisplayName("iPhone SE")
     }
 }
