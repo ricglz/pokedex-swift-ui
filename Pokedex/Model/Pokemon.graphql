@@ -1,0 +1,7 @@
+query GetPokemon{
+  pokemons(first: 10) {
+    number
+    name
+    types
+  }
+}
