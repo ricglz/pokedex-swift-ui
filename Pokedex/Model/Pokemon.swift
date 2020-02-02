@@ -21,20 +21,22 @@ struct Pokemon: Decodable, Identifiable, Hashable {
         case bug = "bug"
     }
 
-    private var pokedexNumber: Int
-    var name: String
-    private var primaryType: PokemonType
-    private var secondaryType: PokemonType?
+    private let pokedexNumber: Int
+    let name: String
+    let image: String?
+    private let primaryType: PokemonType
+    private let secondaryType: PokemonType?
 
     var id: Int { pokedexNumber }
 
-    init(_ name: String,_ types: [String],_ number: Int) {
+    init(_ name: String,_ types: [String],_ number: Int, image: String? = nil) {
         self.name = name
         pokedexNumber = number
         primaryType = PokemonType(rawValue: types[0].lowercased())!
         secondaryType = types.count > 1 ?
             PokemonType(rawValue: types[1].lowercased()) :
             nil
+        self.image = image ?? name
     }
 
     func formattedNumber() -> String {

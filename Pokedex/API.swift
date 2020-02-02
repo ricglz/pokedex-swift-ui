@@ -12,6 +12,7 @@ public final class GetPokemonQuery: GraphQLQuery {
         __typename
         number
         name
+        image
         types
       }
     }
@@ -55,6 +56,7 @@ public final class GetPokemonQuery: GraphQLQuery {
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("number", type: .scalar(String.self)),
         GraphQLField("name", type: .scalar(String.self)),
+        GraphQLField("image", type: .scalar(String.self)),
         GraphQLField("types", type: .list(.scalar(String.self))),
       ]
 
@@ -64,8 +66,8 @@ public final class GetPokemonQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(number: String? = nil, name: String? = nil, types: [String?]? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Pokemon", "number": number, "name": name, "types": types])
+      public init(number: String? = nil, name: String? = nil, image: String? = nil, types: [String?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Pokemon", "number": number, "name": name, "image": image, "types": types])
       }
 
       public var __typename: String {
@@ -94,6 +96,15 @@ public final class GetPokemonQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      public var image: String? {
+        get {
+          return resultMap["image"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "image")
         }
       }
 

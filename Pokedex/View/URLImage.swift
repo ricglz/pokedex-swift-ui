@@ -10,10 +10,11 @@ import SwiftUI
 
 final class ImageLoader : ObservableObject {
     @Published var image: Image?
-    
+
     init(url imageUrl: String) {
         self.image = nil
-        
+        print(imageUrl)
+
         guard let url = URL(string: imageUrl) else { return }
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             if let unwrappedData = data {
@@ -29,16 +30,16 @@ final class ImageLoader : ObservableObject {
 
 struct URLImage: View {
     let placeholder: Image
-    
+
     @ObservedObject private var loader: ImageLoader
-    
+
     init(_ url: String, placeholder: Image = Image(systemName: "photo")) {
         self.loader = ImageLoader(url: url)
         self.placeholder = placeholder
     }
-    
+
     var body: some View {
-        loader.image != nil ? loader.image! : placeholder
+        loader.image != nil ? loader.image!.resizable() : placeholder.resizable()
     }
 }
 
