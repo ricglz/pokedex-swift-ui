@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Apollo
+
+let apollo = ApolloClient(url: URL(string: "https://graphql-pokemon.now.sh/")!)
 
 let pokemonArray: [Pokemon] = load("sample_pokemon.json")
 
